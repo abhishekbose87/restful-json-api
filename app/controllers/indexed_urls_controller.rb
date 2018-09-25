@@ -1,0 +1,2 @@
+class IndexedUrlsController < ApplicationController
+end
