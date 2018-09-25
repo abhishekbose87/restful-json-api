@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(version: 20180925045956) do
     t.jsonb    "links"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["url"], name: "index_indexed_urls_on_url", using: :btree
+    t.index ["url"], name: "index_indexed_urls_on_url", unique: true, using: :btree
   end
 
 end
