@@ -1,0 +1,2 @@
+class IndexedUrl < ApplicationRecord
+end
