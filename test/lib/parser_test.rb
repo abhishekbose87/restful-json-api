@@ -6,7 +6,7 @@ class ParserTest < Minitest::Test
 
   def setup
     stub_request(:any, "http://www.example.com").
-      to_return(body: File.new("#{Rails.root}/tmp/response_body.txt"), status: 200)
+      to_return(body: File.new("#{Rails.root}/test/response_body.txt"), status: 200)
     @parser = HTML::Parser.new("http://www.example.com")
   end
 
@@ -23,7 +23,7 @@ class ParserTest < Minitest::Test
   end
 
   def test_parser_for_h3
-    assert_equal @parser.extract_content("a"), ["Anchor text 1", "Anchor text 2"]
+    assert_equal @parser.extract_content("a"), ["Anchor url 1", "Anchor url 2"]
   end
 
 end

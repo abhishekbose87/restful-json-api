@@ -1,0 +1,7 @@
+<h1>Header 1</h1>
+<h2>Header 2</h2>
+<h3>Header 3</h3>
+<h3>Another h3 header</h3>
+
+<a href="Anchor url 1">Anchor text 1</a>
+<a href="Anchor url 2">Anchor text 2</a>
