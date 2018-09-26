@@ -1,5 +1,7 @@
 class IndexedUrl < ApplicationRecord
-  before_create :parse
+  before_save :parse
+
+  private
 
   def parse
     parser = HTML::Parser.new(self.url)
@@ -9,7 +11,7 @@ class IndexedUrl < ApplicationRecord
       h3: parser.extract_content("h3")
     }
     self.links = {
-      content: parser.extract_content("a")
+      hrefs: parser.extract_content("a")
     }
   end
 
