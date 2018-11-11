@@ -28,6 +28,7 @@ gem 'puma', '~> 3.0'
 gem 'nokogiri'
 gem 'pg'
 gem 'jsonapi-resources'
+gem 'mina'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
